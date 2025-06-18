@@ -208,7 +208,10 @@ ccdproc
 Congratulations all your science files are now bias and flat corrected\!
 
 ## **3\.**    **Wavelength Calibration**
-Start here if not calibrating with Bias, Dark, Flat
+Start here if not calibrating with Bias, Dark, Flat. You can subtract off a bias level by using *imarith*
+
+imarith *image_name* - constant_value *new_image_name*
+
 ### **a. Identifying lines** 
 
 The image we took has lines in pixel space but we need them in terms of wavelength. 
