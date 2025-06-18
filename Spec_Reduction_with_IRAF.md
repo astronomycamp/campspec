@@ -260,6 +260,9 @@ Wavelength (A) 	Pixel (x axis)
 5852			2781  
 6402			3378
 
+![][calibrationlamp.gif]
+
+
 You need to map the pixel values (where the lines in the window currently are) to their associated wavelength values. Pick only 3-4 to use. We recommend determining which lines are which before you officially assign them. 
 
 First, mark 3-4 lines by placing the cursor on them, hitting “m” and entering the wavelength of the line. Type “l” to automatically identify more lines. Your window should now look like this:  
