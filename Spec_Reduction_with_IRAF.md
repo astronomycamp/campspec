@@ -2,8 +2,7 @@
    
    
 Created: June 16th, 2023  
-Updated: June 22nd, 2024  
-   
+Updated: June 17, 2025
    
 Iraf is the software used by most astronomers to reduce long-slit spectroscopic observations. In this manual, instructions are based on data taken at the Kuiper telescope and edited from reduction protocols which have been used for published astronomical results.
 
@@ -82,6 +81,7 @@ There should be 3 different rows of light, two of them are the same and mirrored
 Leave the window with your spectrum open in case you need to reference it while reducing your spectrum. 
 
 ## **2\.**    **Zero and Flat correction**
+If not calibrating your data you may skip until it says begin!
 
  In order to account for noise from the telescope detector, we apply flat and zero corrections.   
 Zeros (aka biases) are zero second exposures which give a measure of the inherent noise of the detector (read noise). Flats (aka continuum flats) in contrast are several second exposures, generally using a white continuum lamp in the case of long-slit spectroscopy, used to determine and correct for the optics of the telescope which can flex and contact with temperature and moisture changes. 
@@ -208,7 +208,7 @@ ccdproc
 Congratulations all your science files are now bias and flat corrected\!
 
 ## **3\.**    **Wavelength Calibration**
-
+Start here if not calibrating with Bias, Dark, Flat
 ### **a. Identifying lines** 
 
 The image we took has lines in pixel space but we need them in terms of wavelength. 
@@ -216,7 +216,7 @@ The image we took has lines in pixel space but we need them in terms of waveleng
 To identify the emission lines, and determine the dispersion relation, i.e. the relation between position along the x-axis and wavelength, use the identify task: 
 
 identify.images \= "Your science image"               
-identify.section \= "line your\_arc\_spectrum\_x\_coord"  
+identify.section \= "line *Your arc spectrum y-coordinate*"  
 identify.database \= "database"  
 identify.coordlist \= "linelists$idhenear.dat"  
 identify.units \= ""  
